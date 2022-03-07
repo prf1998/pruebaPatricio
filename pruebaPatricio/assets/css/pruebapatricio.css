@@ -1,0 +1,106 @@
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+#buttoncomenzar {
+  background-color: white; 
+  border: none;
+  color: #4CAF50;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#buttoncomenzar:hover {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#pregunta1, #pregunta2, #pregunta3, #pregunta4,
+#pregunta5, #pregunta6, #pregunta7, #pregunta8,
+#pregunta9, #pregunta10, #final {
+  display: none;
+  font-size: 30px;
+  text-align: center;
+  padding: 100px;
+  background-color: white;
+  align-items:center;
+  justify-contents:center;  
+	
+}
+
+
+body{
+	background-image: url("./img/apocalipsis.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.responder {
+  background-color: white; 
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.responder:hover {
+  background-color: #4CAF50; 
+  border: 1px solid #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.antsig {
+  background-color: white; 
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  padding: 15px 32px;
+  text-align: center;
+  align-items:center;
+  font-size: 16px;
+  display:none;
+}
+
+.antsig:hover {
+  background-color: #4CAF50; 
+  border: 1px solid #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  align-items:center;  
+  font-size: 16px;
+}
+label {
+  display: inline-block;
+    padding: 15px 32px;
+}
+
+input[type=text], input[type=number] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

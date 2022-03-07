@@ -1,0 +1,182 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>¿Salvarás la humanidad?</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/apocalipsis.jpg">
+</head>
+
+<link rel="stylesheet" type="text/css" href="assets/css/pruebapatricio.css" />
+
+<header>
+<div class="header">
+	<div id="introduccion">
+		A ver, esto es sencillo, si aciertas la mayoría de las preguntas, nos salvas. Si no...
+		<button id="buttoncomenzar" onclick="Comenzar()"> Comenzar </button>
+	</div>
+	<div id="desarrollotest"></div>
+</div>
+</header>
+<body>
+<div id="contenidopreguntas">	
+	<div id="pregunta1">1.¿En que año Cristóbal Colón pisó "Las Indias" ? <br />
+		<label>
+		<input type="radio" name="preg1" id="p11492" /> 1492 <br />
+		</label>
+		<label>
+		<input type="radio" name="preg1" id="p11384" /> 1384 <br />
+		</label>
+		<label>
+		<input type="radio" name="preg1" id="p1711"  /> 711  <br />
+		</label>	
+		<br>
+		<br>
+		<input type="button" class="responder" id="responder1" value="Responder" onclick="Contestar('1')"> 
+		<input type="button" class="antsig" id="siguiente1" value="Siguiente pregunta→" onclick="Siguiente('2')">  
+		<br>
+		<br>
+		<div id="respuesta1"></div>
+	</div>
+  
+	<div id="pregunta2">2.Apellido del escritor de Don Quijote<br />
+    <input type="text"   id="preg2" value="" placeholder="Apellido del escritor"><br />
+	<br>	
+	<br>	
+	<input type="button" class="responder" id="responder2" value="Responder" onclick="Contestar('2')">  
+	<input type="button" class="antsig" id="anterior2" value="← Anterior pregunta" onclick="Anterior('1','2')">  
+	<input type="button" class="antsig" id="siguiente2" value="Siguiente pregunta →" onclick="Siguiente('3')">  
+	<br>	
+	<br>
+	<div id="respuesta2"></div>
+   </div>  
+  
+  <div id="pregunta3">3.La capital de EEUU es<br />
+		<label>
+		<input type="radio" name="preg3" id="p3WashingtonDC" /> Washington D. C.<br />
+		</label>
+		<label>
+		<input type="radio" name="preg3" id="p3Texas" />Texas <br />
+		</label>
+		<label>
+		<input type="radio" name="preg3" id="p3Springfield" /> Springfield<br />
+		</label>
+		<br>	
+		<br>	
+		<input type="button" class="responder" id="responder3" value="Responder" onclick="Contestar('3')">  
+		<input type="button" class="antsig" id="anterior3" value="← Anterior pregunta" onclick="Anterior('2','3')">  
+		<input type="button" class="antsig" id="siguiente3" value="Siguiente pregunta →" onclick="Siguiente('4')">  
+		<br>
+		<br>
+		<div id="respuesta3"></div>
+  </div>  
+
+  <div id="pregunta4">4.Kiev es la capital de<br />
+		<label>
+		<input type="radio" name="preg4" id="p4Estonia" /> Estonia<br />
+		</label>
+		<label>
+		<input type="radio" name="preg4" id="p4Letonia" />Letonia <br />
+		</label>
+		<label>    
+		<input type="radio" name="preg4" id="p4Ucrania" /> Ucrania<br />
+		</label>
+		<br>	
+		<br>	
+		<input type="button" class="responder" id="responder4" value="Responder" onclick="Contestar('4')">  
+		<input type="button" class="antsig" id="anterior4" value="← Anterior pregunta" onclick="Anterior('3','4')">  
+		<input type="button" class="antsig" id="siguiente4" value="Siguiente pregunta →" onclick="Siguiente('5')">  
+		<br>	
+		<br>	
+		<div id="respuesta4"></div>
+  </div>  
+  
+  <div id="pregunta5">5.¿Cuál es el año actual?<br />
+		<input type="number" id="preg5" value="" /><br />
+		<br>	
+		<br>	
+		<input type="button" class="responder" id="responder5" value="Responder" onclick="Contestar('5')">  
+		<input type="button" class="antsig" id="anterior5" value="← Anterior pregunta" onclick="Anterior('4','5')">  
+		<input type="button" class="antsig" id="siguiente5" value="Siguiente pregunta →" onclick="Siguiente('6')">  
+		<br>	
+		<br>		
+		<div id="respuesta5"></div>
+  </div>  
+
+  <div id="pregunta6">6.¿Cuánto es 2+3?<br />
+		<input type="number" id="preg6" value="" /><br />
+		<br>	
+		<br>	
+		<input type="button" class="responder" id="responder6" value="Responder" onclick="Contestar('6')">  
+		<input type="button" class="antsig" id="anterior6" value="← Anterior pregunta" onclick="Anterior('5','6')">  
+		<input type="button" class="antsig" id="siguiente6" value="Siguiente pregunta →" onclick="Siguiente('7')">  
+		<br>	
+		<br>	
+		<div id="respuesta6"></div>
+  </div>
+
+  <div id="pregunta7">7.¿Cuánto es 6/2?<br />
+		<input type="number" id="preg7" value="" /><br />
+		<br>	
+		<br>	
+		<input type="button" class="responder" id="responder7" value="Responder" onclick="Contestar('7')">  
+		<input type="button" class="antsig" id="anterior7" value="← Anterior pregunta" onclick="Anterior('6','7')">  
+		<input type="button" class="antsig" id="siguiente7" value="Siguiente pregunta →" onclick="Siguiente('8')">  
+		<br>	
+		<br>
+		<div id="respuesta7"></div>
+  </div>
+
+  <div id="pregunta8">8.La vida es una caja de bombones, <br />
+		<label>
+		<input type="radio" name="preg8" id="p8nuncasabesloquetevaatocar" /> nunca sabes lo que te va a tocar<br />
+		</label>
+		<label>
+		<input type="radio" name="preg8" id="p8siempretocaalgunamargo" />siempre toca algún amargo<br />
+		</label>
+		<br>	
+		<br>	
+		<input type="button" class="responder" id="responder8" value="Responder" onclick="Contestar('8')">  
+		<input type="button" class="antsig" id="anterior8" value="← Anterior pregunta" onclick="Anterior('7','8')">  
+		<input type="button" class="antsig" id="siguiente8" value="Siguiente pregunta →" onclick="Siguiente('9')">  
+		<br>	
+		<br>
+		<div id="respuesta8"></div>
+  </div>
+  
+  <div id="pregunta9">9.¿En qué provincia está el municipio de Guarromán? <br />
+		<label>
+		<input type="radio" name="preg9" id="p9Malaga" /> Málaga<br />
+		</label>
+		<label>
+		<input type="radio" name="preg9" id="p9jaen" />Jaén<br />
+		</label>
+		<label>
+		<input type="radio" name="preg9" id="p9sevilla" />Sevilla<br />
+		</label>
+		<br>	
+		<br>	
+		<input type="button" class="responder" id="responder9" value="Responder" onclick="Contestar('9')">  
+		<input type="button" class="antsig"  id="anterior9" value="← Anterior pregunta" onclick="Anterior('8','9')">  
+		<input type="button" class="antsig"  id="siguiente9" value="Siguiente pregunta →" onclick="Siguiente('10')">  
+		<br>	
+		<br>
+		<div id="respuesta9"></div>
+  </div>
+  
+  <div id="pregunta10">10.Pienso, luego... <br />
+		<input type="text"   id="preg10" value="" /><br />
+		<br>	
+		<br>	
+		<input type="button" class="responder" id="responder10" value="Responder" onclick="Contestar('10')">  
+		<input type="button" class="antsig" id="anterior10" value="← Anterior pregunta" onclick="Anterior('9','10')">  
+		<br>
+		<br>
+		<div id="respuesta10"></div>
+  </div>
+  
+</div>
+</body>
+
+
+<script src="assets/js/pruebapatricio.js"></script>
+
+</html>
