@@ -1,10 +1,23 @@
 	var aciertos = 0;
 	var errores = 0;
 	function Comenzar() {
-		document.getElementById('introduccion').style.display = 'none'; 
-		document.getElementById('pregunta1').style.display    = 'block'; 
+		document.getElementById('introduccion').innerHTML  = "¿Salvarás a la humanidad?";
+		loading('1');
+		document.getElementById('desarrollotest').innerHTML = "<div style='font-size:70%;margin: 10px;'>Confiamos en ti</div>";
+		
 	}
 	
+	function loading(pregunta){
+		document.getElementsByClassName('preloader')[0].style.display = 'block';
+		setTimeout(() => {
+			document.getElementById('pregunta'+pregunta).style.display    = 'block'; 
+			document.getElementsByClassName('preloader')[0].style.visibility = 'hidden';
+			document.getElementsByClassName('preloader')[0].style.opacity =  '0';
+			document.getElementsByClassName('preloader')[0].style.transition = 'visibility 0s, opacity 1s linear';
+		  }, 1000); 
+
+
+	}
 	function Contestar(pregunta){
 	var  finalizar = false;
 		if (pregunta == "1"){
@@ -224,8 +237,8 @@
 		document.getElementById('desarrollotest').innerHTML = "<div style='display:inline-block;'> Sabía yo que no podríamos confiar en ti, bueno,"+
 		"inténtalo de nuevo anda...</div><button id='buttoncomenzar' onClick='document.location.reload()'>Volvamos a empezar...</button> ";  
 		} else if (!finalizar){
-		document.getElementById('desarrollotest').innerHTML = "<div style='color:green;'> Aciertos:"+aciertos
-		+"/10</div><div style='color:red;display:inline-block'>Errores:"+errores+"/10</div>";
+		document.getElementById('desarrollotest').innerHTML = "<div style='color:green;display:inline-block;font-size:70%;margin: 10px;'> Aciertos:"+aciertos
+		+"/10</div><div style='color:#c32222;display:inline-block;font-size:70%;'>Errores:"+errores+"/10</div>";
 		}
 	}
 //Funcion encargada de volver a la anterior pregunta

@@ -1,9 +1,14 @@
+/*Add fuente google */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Teko:wght@700&display=swap');
+
 .header {
   padding: 60px;
   text-align: center;
-  background: #1abc9c;
+  background: #9c9c9cc4;
   color: white;
   font-size: 30px;
+  font-family: 'Oswald', sans-serif;
+
 }
 
 #buttoncomenzar {
@@ -15,6 +20,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-family: 'Oswald', sans-serif;
 }
 
 #buttoncomenzar:hover {
@@ -26,6 +32,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-family: 'Oswald', sans-serif;
 }
 
 #pregunta1, #pregunta2, #pregunta3, #pregunta4,
@@ -38,6 +45,7 @@
   background-color: white;
   align-items:center;
   justify-contents:center;  
+  font-family: 'Oswald', sans-serif;
 	
 }
 
@@ -103,4 +111,29 @@ input[type=text], input[type=number] {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+/* Simbolo loading */
+.preloader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid #666;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  display: none;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
