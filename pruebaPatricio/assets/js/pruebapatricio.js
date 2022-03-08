@@ -20,7 +20,7 @@
 	function Comenzar() {
 		document.getElementById('introduccion').innerHTML  = "¿Salvarás a la humanidad?";
 		loading('1');
-		document.getElementById('desarrollotest').innerHTML = "<div style='font-size:70%;margin: 10px;'>Confiamos en ti</div>";
+		document.getElementById('desarrollotest').innerHTML = "<div style='font-size:80%;margin: 10px;'>Confiamos en ti</div>";
 		
 	}
 	
@@ -231,7 +231,7 @@
 			    if (aciertos >= 5) { //Si el usuario responde a la ultima pregunta y los aciertos son mayor igual a 5 habrá ganado
 				    finalizar	= true;
 					document.getElementById('contenidopreguntas').innerHTML = "<div id='final'><h3> Ole y ole los caracoles!! Nos has salvado!!</h3>"+
-					"<div style='color:green;'> Aciertos:"+aciertos
+					"<div style='color:#44f044;'> Aciertos:"+aciertos
 					+"/10</div><div style='color:red;display:inline-block'>Errores:"+errores+"/10</div></div>";
 					document.getElementById('final').style.display="block";
 				    document.getElementById('desarrollotest').innerHTML = "<div style='display:inline-block;'> Enhorabuena!!"+
@@ -245,14 +245,14 @@
 		document.getElementById('desarrollotest').innerHTML = "<div style='display:inline-block;'> Sabía yo que no podríamos confiar en ti, bueno,"+
 		"inténtalo de nuevo anda...</div><button id='buttoncomenzar' onClick='document.location.reload()'>Volvamos a empezar...</button> ";  
 		} else if (!finalizar){
-		document.getElementById('desarrollotest').innerHTML = "<div style='color:green;display:inline-block;font-size:70%;margin: 10px;'> Aciertos:"+aciertos
-		+"/10</div><div style='color:#c32222;display:inline-block;font-size:70%;'>Errores:"+errores+"/10</div>";
+		document.getElementById('desarrollotest').innerHTML = "<div style='color:#44f044;display:inline-block;font-size:80%;margin: 10px;'> Aciertos:"+aciertos
+		+"/10</div><div style='color:#c32222;display:inline-block;font-size:80%;'>Errores:"+errores+"/10</div>";
 		}
 	}
 //Funcion encargada de volver a la anterior pregunta
 function Anterior(pregunta,preguntaanterior){
 		loading(pregunta);
-		document.getElementById('pregunta'+pregunta).style.display = "block";
+
 		document.getElementById('pregunta'+preguntaanterior).style.display = "none";
 }
 

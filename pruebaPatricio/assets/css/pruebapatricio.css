@@ -125,7 +125,7 @@ input[type=text], input[type=number] {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   left: 50%;
-  top: 50%;
+  top: 40%;
   position: absolute;
   visibility: hidden;
 }
