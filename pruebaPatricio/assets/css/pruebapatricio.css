@@ -127,7 +127,7 @@ input[type=text], input[type=number] {
   left: 50%;
   top: 50%;
   position: absolute;
-  display: none;
+  visibility: hidden;
 }
 @keyframes girar {
   from {

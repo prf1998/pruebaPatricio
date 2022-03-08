@@ -1,14 +1,11 @@
+	/*Variables que contaran aciertos y errores */
 	var aciertos = 0;
 	var errores = 0;
-	function Comenzar() {
-		document.getElementById('introduccion').innerHTML  = "¿Salvarás a la humanidad?";
-		loading('1');
-		document.getElementById('desarrollotest').innerHTML = "<div style='font-size:70%;margin: 10px;'>Confiamos en ti</div>";
-		
-	}
-	
+
+	/*Funcion que cargara el preloader */
 	function loading(pregunta){
-		document.getElementsByClassName('preloader')[0].style.display = 'block';
+		document.getElementsByClassName('preloader')[0].style.visibility = 'visible';
+		document.getElementsByClassName('preloader')[0].style.opacity = '1';
 		setTimeout(() => {
 			document.getElementById('pregunta'+pregunta).style.display    = 'block'; 
 			document.getElementsByClassName('preloader')[0].style.visibility = 'hidden';
@@ -18,6 +15,16 @@
 
 
 	}
+
+	/*Funcion que activara la priera pregunta */
+	function Comenzar() {
+		document.getElementById('introduccion').innerHTML  = "¿Salvarás a la humanidad?";
+		loading('1');
+		document.getElementById('desarrollotest').innerHTML = "<div style='font-size:70%;margin: 10px;'>Confiamos en ti</div>";
+		
+	}
+	
+	/*Funcion que comprueba las respuestas y cuenta los aciertos y errores */
 	function Contestar(pregunta){
 	var  finalizar = false;
 		if (pregunta == "1"){
@@ -220,7 +227,8 @@
 					errores++;	
 				}
 				document.getElementById('preg10').disabled = true;
-			    if (aciertos >= 5) {
+
+			    if (aciertos >= 5) { //Si el usuario responde a la ultima pregunta y los aciertos son mayor igual a 5 habrá ganado
 				    finalizar	= true;
 					document.getElementById('contenidopreguntas').innerHTML = "<div id='final'><h3> Ole y ole los caracoles!! Nos has salvado!!</h3>"+
 					"<div style='color:green;'> Aciertos:"+aciertos
@@ -232,7 +240,7 @@
 			}
 		}
 		
-		if (errores >= 5) {
+		if (errores >= 5) { //Si el  usuario comete 5 o más errores paralizamos el test
 		document.getElementById('contenidopreguntas').innerHTML = "";
 		document.getElementById('desarrollotest').innerHTML = "<div style='display:inline-block;'> Sabía yo que no podríamos confiar en ti, bueno,"+
 		"inténtalo de nuevo anda...</div><button id='buttoncomenzar' onClick='document.location.reload()'>Volvamos a empezar...</button> ";  
@@ -243,13 +251,14 @@
 	}
 //Funcion encargada de volver a la anterior pregunta
 function Anterior(pregunta,preguntaanterior){
+		loading(pregunta);
 		document.getElementById('pregunta'+pregunta).style.display = "block";
 		document.getElementById('pregunta'+preguntaanterior).style.display = "none";
 }
 
 //Función encargada de ir a la siguiente pregunta	
 function Siguiente(pregunta){
-		document.getElementById('pregunta'+pregunta).style.display = "block";
+		loading(pregunta);	
 		pregunta-=1;
 		document.getElementById('pregunta'+pregunta).style.display = "none";
 }
